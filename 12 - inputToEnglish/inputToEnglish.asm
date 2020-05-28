@@ -3,11 +3,11 @@ DATAS SEGMENT
     feb DB 'February'
     mar DB 'March   '
     pass DB 'Pass    '
-    ;┤╦┤ж╩ф╚ы╩¤╛▌╢╬┤·┬ы
+    ;цндхдДш╛УхЕецХ░цНоцо╡ф╗гчаБ
 DATAS ENDS
 
 STACKS SEGMENT
-    ;┤╦┤ж╩ф╚ы╢╤╒╗╢╬┤·┬ы
+    ;цндхдДш╛УхЕехаЖцаИцо╡ф╗гчаБ
 STACKS ENDS
 
 CODES SEGMENT

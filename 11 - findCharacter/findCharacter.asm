@@ -6,7 +6,7 @@ DATAS SEGMENT
 DATAS ENDS
 
 STACKS SEGMENT
-    ;�˴������ջ�δ���
+    ;此处输入堆栈段代码
 STACKS ENDS
 
 CODES SEGMENT
@@ -20,17 +20,17 @@ START:
 find_character:
 	MOV AL, string[SI]
 	CMP AL, '0'
-	JB other;С��0����ת�������ַ�ͳ��
-	CMP AL, 58;9��ASCII��ֵ��1
-	JB num;С�ڵ���9����ת������ͳ�ƿ�
+	JB other;小于0，跳转到其他字符统计
+	CMP AL, 58;9的ASCII码值加1
+	JB num;小于等于9，跳转到数字统计块
 	CMP AL, 'A'
-	JB other;С��A����ת�������ַ�ͳ��
-	CMP AL, 91;Z��ASCII��ֵ��1
-	JB alpha;С�ڵ���Z����ת����ĸͳ�ƿ�
+	JB other;小于A，跳转到其他字符统计
+	CMP AL, 91;Z的ASCII码值加1
+	JB alpha;小于等于Z，跳转到字母统计块
 	CMP AL, 'a'
-	JB other;С��a����ת�������ַ�ͳ��
-	CMP AL, 123;z��ASCII��ֵ��1
-	JB alpha;С�ڵ���z����ת����ĸͳ�ƿ�
+	JB other;小于a，跳转到其他字符统计
+	CMP AL, 123;z的ASCII码值加1
+	JB alpha;小于等于z，跳转到字母统计块
 other:
 	INC otherCount
 	JMP increment

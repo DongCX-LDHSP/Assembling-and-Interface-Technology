@@ -1,9 +1,9 @@
 DATAS SEGMENT
-    ;┤╦┤ж╩ф╚ы╩¤╛▌╢╬┤·┬ы  
+    ;цндхдДш╛УхЕецХ░цНоцо╡ф╗гчаБ  
 DATAS ENDS
 
 STACKS SEGMENT
-    ;┤╦┤ж╩ф╚ы╢╤╒╗╢╬┤·┬ы
+    ;цндхдДш╛УхЕехаЖцаИцо╡ф╗гчаБ
 STACKS ENDS
 
 CODES SEGMENT
@@ -18,7 +18,7 @@ START:
 	array_add:
 	    ADD AX, array[SI]
 	    ADD SI, 2
-    LOOP array_add;┤╦┤ж╩ф╚ы┤·┬ы╢╬┤·┬ы
+    LOOP array_add;цндхдДш╛УхЕеф╗гчаБцо╡ф╗гчаБ
     MOV AH,4CH
     INT 21H
 CODES ENDS

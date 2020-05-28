@@ -1,11 +1,11 @@
 DATAS SEGMENT
     string1 DB 'AbcdE3a79G'
     string2 DB 10 DUP(?)
-    ;´Ë´¦ÊäÈëÊý¾Ý¶Î´úÂë
+    ;æ­¤å¤„è¾“å…¥æ•°æ®æ®µä»£ç 
 DATAS ENDS
 
 STACKS SEGMENT
-    ;´Ë´¦ÊäÈë¶ÑÕ»¶Î´úÂë
+    ;æ­¤å¤„è¾“å…¥å †æ ˆæ®µä»£ç 
 STACKS ENDS
 
 CODES SEGMENT
@@ -14,7 +14,7 @@ START:
     MOV AX,DATAS
     MOV DS,AX
 
-	;Êý¾ÝÇåÁã¼°³õÊ¼»¯
+	;æ•°æ®æ¸…é›¶åŠåˆå§‹åŒ–
     MOV CX, 10
     MOV AX, 0
     MOV SI, 0
@@ -27,7 +27,7 @@ START:
 ;	ADD SI, 1
 ;	LOOP output1
 
-;	Êý¾ÝÇåÁã¼°³õÊ¼»¯
+;	æ•°æ®æ¸…é›¶åŠåˆå§‹åŒ–
 ;	MOV CX, 10
 ;	MOV AX, 0
 ;   MOV SI, 0
@@ -39,10 +39,10 @@ copy:
 	LOOP copy
 	
 ;	XOR AX, AX
-;	MOV DL, 10;»»ÐÐ·ûµÄASCIIÂëÖµÊÇ10
+;	MOV DL, 10;æ¢è¡Œç¬¦çš„ASCIIç å€¼æ˜¯10
 ;	MOV AX, 2
 ;	INT 21H
-	;Êý¾ÝÇåÁã¼°³õÊ¼»¯
+	;æ•°æ®æ¸…é›¶åŠåˆå§‹åŒ–
 ;   MOV CX, 10
 ;   MOV AX, 0
 ;   MOV SI, 0

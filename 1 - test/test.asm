@@ -1,10 +1,10 @@
 DATAS SEGMENT
     strA 'hello'
-    strB 'world';┤╦┤ж╩ф╚ы╩¤╛▌╢╬┤·┬ы  
+    strB 'world';цндхдДш╛УхЕецХ░цНоцо╡ф╗гчаБ  
 DATAS ENDS
 
 STACKS SEGMENT
-    ;┤╦┤ж╩ф╚ы╢╤╒╗╢╬┤·┬ы
+    ;цндхдДш╛УхЕехаЖцаИцо╡ф╗гчаБ
 STACKS ENDS
 
 CODES SEGMENT

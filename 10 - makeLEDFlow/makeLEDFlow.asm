@@ -1,9 +1,9 @@
 DATAS SEGMENT
-    ;此处输入数据段代码  
+    ;�˴��������ݶδ���  
 DATAS ENDS
 
 STACKS SEGMENT
-    ;此处输入堆栈段代码
+    ;�˴������ջ�δ���
 STACKS ENDS
 
 CODES SEGMENT
@@ -17,21 +17,21 @@ INIT:
 	MOV DX, 0646H
 	OUT DX, AL
 	
-	;将AX的值初始化为：0000,1000,0001,0000
+	;��AX��ֵ��ʼ��Ϊ��0000,1000,0001,0000
 	MOV BH, 8H
 	MOV BL, 10H
 circle:
-	;将低八位的值送入PA口
+	;���Ͱ�λ��ֵ����PA��
 	MOV DX, 640H
 	OUT DX, BL
-	ROR BL, 2;循环右移AX低八位形成向右分散移动的效果，步长为2
-	;将AX高八位的值送入PB口
+	ROR BL, 2;ѭ������AX�Ͱ�λ�γ����ҷ�ɢ�ƶ���Ч��������Ϊ2
+	;��AX�߰�λ��ֵ����PB��
 	MOV DX, 642H
 	OUT DX, AH
-	ROL AH, 2;循环左移AX高八位形成向左分散移动的效果，步长为2
+	ROL AH, 2;ѭ������AX�߰�λ�γ������ɢ�ƶ���Ч��������Ϊ2
 JMP circle
     
-    ;此处输入代码段代码
+    ;�˴��������δ���
     MOV AH,4CH
     INT 21H
 CODES ENDS

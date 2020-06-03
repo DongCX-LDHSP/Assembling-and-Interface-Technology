@@ -1,10 +1,10 @@
 DATAS SEGMENT
     strA DB 'hello'
-    strB DB 'hlllo';цндхдДш╛УхЕецХ░цНоцо╡ф╗гчаБ  
+    strB DB 'hlllo';┤╦┤ж╩ф╚ы╩¤╛▌╢╬┤·┬ы  
 DATAS ENDS
 
 STACKS SEGMENT
-    ;цндхдДш╛УхЕехаЖцаИцо╡ф╗гчаБ
+    ;┤╦┤ж╩ф╚ы╢╤╒╗╢╬┤·┬ы
 STACKS ENDS
 
 CODES SEGMENT

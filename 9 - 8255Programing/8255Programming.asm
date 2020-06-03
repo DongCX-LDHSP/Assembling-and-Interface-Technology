@@ -1,9 +1,9 @@
 DATAS SEGMENT
-    ;æ­¤å¤„è¾“å…¥æ•°æ®æ®µä»£ç   
+    ;´Ë´¦ÊäÈëÊý¾Ý¶Î´úÂë  
 DATAS ENDS
 
 STACKS SEGMENT
-    ;æ­¤å¤„è¾“å…¥å †æ ˆæ®µä»£ç 
+    ;´Ë´¦ÊäÈë¶ÑÕ»¶Î´úÂë
 STACKS ENDS
 
 CODES SEGMENT
@@ -12,7 +12,7 @@ START:
     MOV AX,DATAS
     MOV DS,AX
 INIT:
-    MOV AL, 90H; å³10010000B
+    MOV AL, 90H; ¼´10010000B
     MOV DX, 646H
     OUT DX, AL
 
@@ -22,7 +22,7 @@ S:
 	MOV DX, 642H
     OUT DX, AL
 	JMP S
-    ;æ­¤å¤„è¾“å…¥ä»£ç æ®µä»£ç 
+    ;´Ë´¦ÊäÈë´úÂë¶Î´úÂë
     MOV AH,4CH
     INT 21H
 CODES ENDS

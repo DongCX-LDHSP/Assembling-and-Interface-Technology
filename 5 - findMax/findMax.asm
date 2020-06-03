@@ -1,11 +1,11 @@
 datarea SEGMENT
     number dw 10, 9, 23, 4
     adr dw number
-    count dw 0;æ­¤å¤„è¾“å…¥æ•°æ®æ®µä»£ç   
+    count dw 0;´Ë´¦ÊäÈëÊı¾İ¶Î´úÂë  
 datarea ENDS
 
 STACKS SEGMENT
-    ;æ­¤å¤„è¾“å…¥å †æ ˆæ®µä»£ç 
+    ;´Ë´¦ÊäÈë¶ÑÕ»¶Î´úÂë
 STACKS ENDS
 
 CODES SEGMENT
@@ -16,18 +16,18 @@ program segment
 main proc far
     ASSUME CS:CODES, DS:datarea
 START:
-;è®¾å®šè¿”å›å †æ ˆ
+;Éè¶¨·µ»Ø¶ÑÕ»
 	push DS
 	sub ax, ax
 	push ax
-;è®¾ç½®æ®µå¯„å­˜å™¨
+;ÉèÖÃ¶Î¼Ä´æÆ÷
 	mov ax, datarea
 	mov ds, ax
-;è¿™é‡Œæ˜¯ç¼–å†™çš„ä¸»ç¨‹åº
+;ÕâÀïÊÇ±àĞ´µÄÖ÷³ÌĞò
 	mov cx, 0
 	mov bx, adr
 	mov ax, [bx]
-    ;æ­¤å¤„è¾“å…¥ä»£ç æ®µä»£ç 
+    ;´Ë´¦ÊäÈë´úÂë¶Î´úÂë
     MOV AH,4CH
     INT 21H
 program ENDS

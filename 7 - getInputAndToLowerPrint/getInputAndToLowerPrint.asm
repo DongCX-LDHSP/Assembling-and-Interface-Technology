@@ -3,11 +3,11 @@ DATAS SEGMENT
     a DB 'A'
     z DB 'Z'
     s DB 'a' - 'A'
-    ;此处输入数据段代码
+    ;�˴��������ݶδ���
 DATAS ENDS
 
 STACKS SEGMENT
-    ;此处输入堆栈段代码
+    ;�˴������ջ�δ���
 STACKS ENDS
 
 CODES SEGMENT
@@ -16,7 +16,7 @@ START:
     MOV AX,DATAS
     MOV DS,AX
     
-    ;数据清零及初始化
+    ;�������㼰��ʼ��
     MOV CX, 10
     MOV AX, 0
     MOV SI, 0
@@ -32,7 +32,7 @@ LOOP get_input
 	MOV DL, 10
 	MOV AH, 2
 	INT 21H
-	;数据清零及初始化
+	;�������㼰��ʼ��
 	MOV CX, 10
 	MOV SI, 0
 	MOV AX, 0
@@ -40,11 +40,11 @@ LOOP get_input
 to_lower:
 	MOV AL, string[SI]
 	CMP AL, a
-	JB increment;待转换字符小于A的ASCII码值，跳转到下标移动语句
+	JB increment;��ת���ַ�С��A��ASCII��ֵ����ת���±��ƶ����
 	CMP AL, z
-	JA increment;待转换字符大于Z的ASCII码值，跳转到下标移动语句
-	ADD AL, s;待转换字符是大写字母，则将其加上'a'和'A'的ASCII码值的差值转换成小写字母
-	MOV DL, AL;将待输出字符存到DL中
+	JA increment;��ת���ַ�����Z��ASCII��ֵ����ת���±��ƶ����
+	ADD AL, s;��ת���ַ��Ǵ�д��ĸ���������'a'��'A'��ASCII��ֵ�Ĳ�ֵת����Сд��ĸ
+	MOV DL, AL;��������ַ��浽DL��
 	MOV AH, 2
 	INT 21H
 	
